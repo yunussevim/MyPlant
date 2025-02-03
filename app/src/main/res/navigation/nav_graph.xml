@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardingFragment">
+
+    <!-- Onboarding Fragment -->
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.hubx.myplant.pages.onboarding.OnboardingFragment"
+        android:label="Onboarding">
+        <!-- Onboarding tamamlandığında main'e geçiş eylemi -->
+        <action
+            android:id="@+id/action_onboarding_to_main"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <!-- Main Fragment -->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.hubx.myplant.pages.main.MainFragment"
+        android:label="Main" />
+
+</navigation>
