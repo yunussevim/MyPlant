@@ -2,23 +2,38 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onboardingFragment">
+    app:startDestination="@id/onboardingStartFragment">
 
-    <!-- Onboarding Fragment -->
     <fragment
-        android:id="@+id/onboardingFragment"
-        android:name="com.hubx.myplant.pages.onboarding.OnboardingFragment"
-        android:label="Onboarding">
-        <!-- Onboarding tamamlandığında main'e geçiş eylemi -->
+        android:id="@+id/onboardingStartFragment"
+        android:name="com.hubx.myplant.pages.onboarding.start.OnboardingStartFragment"
+        android:label="Onboarding1">
         <action
-            android:id="@+id/action_onboarding_to_main"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_onboarding_to_pager"
+            app:destination="@id/onboardingPager" />
     </fragment>
 
-    <!-- Main Fragment -->
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.hubx.myplant.pages.main.MainFragment"
-        android:label="Main" />
+        android:id="@+id/onboardingPager"
+        android:name="com.hubx.myplant.pages.onboarding.pager.OnboardingPagerFragment"
+        android:label="Onboarding Pager" >
+        <action
+            android:id="@+id/action_pager_to_paywall"
+            app:destination="@id/onboardingPaywall" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingPaywall"
+        android:name="com.hubx.myplant.pages.onboarding.paywall.PaywallFragment"
+        android:label="Onboarding Paywall" >
+        <action
+            android:id="@+id/action_paywall_to_main"
+            app:destination="@id/main" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/main"
+        android:label="main"
+        android:name="com.hubx.myplant.pages.main.MainFragment"/>
 
 </navigation>

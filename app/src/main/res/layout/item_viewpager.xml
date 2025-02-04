@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/vp_header"
+        android:layout_width="315dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="46dp"
+        android:fontFamily="@font/roboto_family"
+        android:lineHeight="33dp"
+        android:textAlignment="viewStart"
+        android:textColor="#13231B"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/vp_image_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/onboarding_page_2_bg"
+        app:layout_constraintBottom_toTopOf="@+id/vp_next_button"
+        app:layout_constraintDimensionRatio="360:670"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vp_header" />
+
+    <ImageView
+        android:id="@+id/vp_brush_1"
+        android:layout_width="136dp"
+        android:layout_height="13dp"
+        android:src="@drawable/brush_1"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="180dp"
+        app:layout_constraintTop_toTopOf="@+id/vp_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vp_header" />
+
+    <ImageView
+        android:id="@+id/vp_brush_2"
+        android:layout_width="151dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="126dp"
+        android:src="@drawable/brush_2"
+        app:layout_constraintTop_toTopOf="@+id/vp_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vp_header" />
+
+    <Button
+        android:id="@+id/vp_next_button"
+        android:layout_width="320dp"
+        android:layout_height="56dp"
+        android:background="@drawable/btn_background"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="@string/onboarding_pager_btn"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vp_image_bg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
