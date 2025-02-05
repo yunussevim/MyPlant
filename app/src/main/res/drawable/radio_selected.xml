@@ -1,0 +1,17 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="24dp"
+        android:height="24dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/payment_selected_border" />
+        </shape>
+    </item>
+    <item
+        android:width="12dp"
+        android:height="12dp"
+        android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+</layer-list>

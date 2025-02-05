@@ -38,7 +38,7 @@ class OnboardingPagerFragment : Fragment() {
             if (currentPosition < pageList.size - 2) {
                 binding.viewPager.currentItem = currentPosition + 1
             } else {
-                completeOnboardingAndNavigate()
+                findNavController().navigate(R.id.action_pager_to_paywall)
             }
         }
         binding.viewPager.adapter = adapter
@@ -50,21 +50,10 @@ class OnboardingPagerFragment : Fragment() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 if (position == pageList.size - 1) {
-                    completeOnboardingAndNavigate()
+                    findNavController().navigate(R.id.action_pager_to_paywall)
                 }
             }
         })
-    }
-
-    private fun completeOnboardingAndNavigate() {
-
-        val prefs = requireContext().getSharedPreferences("myAppPrefs", Context.MODE_PRIVATE)
-        prefs.edit().putBoolean("onboarding_completed", true).apply()
-
-        val navOptions = NavOptions.Builder()
-            .setPopUpTo(R.id.onboardingStartFragment, true)
-            .build()
-        findNavController().navigate(R.id.action_pager_to_paywall, null, navOptions)
     }
 
     override fun onDestroyView() {
