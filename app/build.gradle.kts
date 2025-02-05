@@ -85,6 +85,10 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
     implementation(libs.material)
+
+    // Glide
+    implementation (libs.glide.glide)
+    implementation (libs.glide.compiler)
 }
 
 kapt {

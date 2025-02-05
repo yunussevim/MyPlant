@@ -28,4 +28,15 @@
     <string name="payment_opt1_desc">$2.99/month, auto renewable</string>
     <string name="payment_opt2_header">1 Year</string>
     <string name="payment_opt2_desc">First 3 days free, then $529,99/year</string>
+
+    <string name="main_welcome">Hi, plant lover!</string>
+    <string name="main_morning">Good Afternoon! ⛅</string>
+    <string name="searchbar_hint">Search for plants</string>
+
+    <string name="navbar_home">Home</string>
+    <string name="navbar_diagnose">Diagnose</string>
+    <string name="navbar_garden">My Garden</string>
+    <string name="navbar_profile">Profile</string>
+    <string name="premium_header">FREE Premium Available</string>
+    <string name="premium_desc">Tap to upgrade your account!</string>
 </resources>
