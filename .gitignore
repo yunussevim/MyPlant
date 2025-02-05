@@ -1,15 +1,42 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# Gradle ile oluşturulan derleme çıktıları
+.gradle/
+build/
+**/build/
+
+# Yerel ayarlar
 local.properties
+
+# Android Studio/IntelliJ IDEA dosyaları
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Log dosyaları
+*.log
+
+# Üçüncü parti kütüphane dosyaları (örn. Eclipse dışa aktarımı)
+.externalNativeBuild
+
+# NDK ile ilgili derleme çıktıları
+.obj/
+.cpp/
+
+# CMake ile ilgili derleme çıktıları
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# OS tarafından oluşturulan dosyalar
+.DS_Store
+Thumbs.db
+
+# Crashlytics
+fabric.properties
+
+# Google Services JSON dosyası (örn. Firebase konfigürasyonu)
+google-services.json
+
+# Proguard dosyası
+proguard/

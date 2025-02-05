@@ -1,18 +1,11 @@
 package com.hubx.myplant.pages.onboarding.pager
 
-import android.graphics.Typeface
-import android.text.Html
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.StyleSpan
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.hubx.myplant.databinding.ItemViewpagerBinding
-import kotlin.math.log
+import com.hubx.myplant.util.TextUtil
 
 class ViewPagerAdapter(
     private val pages: List<OnboardingPage>,
@@ -35,7 +28,7 @@ class ViewPagerAdapter(
                 binding.vpBrush1.visibility = View.VISIBLE
                 binding.vpBrush2.visibility = View.GONE
             }
-            binding.vpHeader.text = makeBold(text, boldPart)
+            binding.vpHeader.text = TextUtil.makeBold(text, boldPart)
         }
     }
 
@@ -53,19 +46,4 @@ class ViewPagerAdapter(
     }
 
     override fun getItemCount(): Int = pages.size
-
-    private fun makeBold(text: String, boldPart: String): SpannableString{
-        val spannableString = SpannableString(text)
-
-        val start = text.indexOf(boldPart)
-        val end = start + boldPart.length
-
-        spannableString.setSpan(
-            StyleSpan(Typeface.BOLD),
-            start,
-            end,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-        return spannableString
-    }
 }

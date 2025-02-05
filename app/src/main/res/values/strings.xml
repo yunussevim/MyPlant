@@ -12,4 +12,20 @@
     <string name="onboarding_header_third">Get plant care guides</string>
     <string name="onboarding_header_third_bold">care guides</string>
     <string name="onboarding_pager_btn">Continue</string>
+
+    <string name="paywall_header">PlantApp Premium</string>
+    <string name="paywall_header_bold">PlantApp</string>
+    <string name="paywall_description">All Access Features</string>
+    <string name="unlimited">Unlimited</string>
+    <string name="plant_identify">Plant Identify</string>
+    <string name="faster">Faster</string>
+    <string name="process">Process</string>
+    <string name="try_for_free">Try free for 3 days</string>
+    <string name="payment_bottom">After the 3-day free trial period you’ll be charged ₺274.99 per year unless you cancel before the trial expires. Yearly Subscription is Auto-Renewable</string>
+    <string name="payment_links">Terms • Privacy • Restore</string>
+    <string name="payment_discount">Save 50%</string>
+    <string name="payment_opt1_header">1 Month</string>
+    <string name="payment_opt1_desc">$2.99/month, auto renewable</string>
+    <string name="payment_opt2_header">1 Year</string>
+    <string name="payment_opt2_desc">First 3 days free, then $529,99/year</string>
 </resources>
