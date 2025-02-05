@@ -28,6 +28,8 @@
         android:label="Onboarding Paywall" >
         <action
             android:id="@+id/action_paywall_to_main"
+            app:popUpTo="@id/onboardingStartFragment"
+            app:popUpToInclusive="true"
             app:destination="@id/main" />
     </fragment>
 
@@ -35,5 +37,25 @@
         android:id="@+id/main"
         android:label="main"
         android:name="com.hubx.myplant.pages.main.MainFragment"/>
+
+    <fragment
+        android:id="@+id/home"
+        android:label="home"
+        android:name="com.hubx.myplant.pages.home.HomeFragment"/>
+
+    <fragment
+        android:id="@+id/diagnose"
+        android:label="main"
+        android:name="com.hubx.myplant.pages.diagnose.DiagnoseFragment"/>
+
+    <fragment
+        android:id="@+id/my_plants"
+        android:label="main"
+        android:name="com.hubx.myplant.pages.myplants.MyPlantsFragment"/>
+
+    <fragment
+        android:id="@+id/profile"
+        android:label="main"
+        android:name="com.hubx.myplant.pages.profile.ProfileFragment"/>
 
 </navigation>

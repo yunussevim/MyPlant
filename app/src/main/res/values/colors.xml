@@ -20,4 +20,17 @@
     <color name="payment_unselected_radio">#2d3a35</color>
     <color name="gradient_start">#101e17</color>
     <color name="gradient_end">#143524</color>
+    <color name="searchbar_border">#dadadc</color>
+    <color name="searchbar_hint">#AFAFAF</color>
+    <color name="bottom_nav_selected">#28AF6B</color>
+    <color name="bottom_nav_unselected">#979798</color>
+    <color name="scan_btn_outer">#2CCC80</color>
+    <color name="scan_btn_inner">#28AF6E</color>
+    <color name="premium_bg">#24201A</color>
+    <color name="premium_header_from">#E5C990</color>
+    <color name="premium_header_to">#E4B046</color>
+    <color name="premium_desc_from">#FFDE9C</color>
+    <color name="premium_desc_to">#F5C25B</color>
+    <color name="plants_item_border">#f5f5f5</color>
+    <color name="plants_card_bg">#fdfffd</color>
 </resources>

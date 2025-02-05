@@ -10,7 +10,6 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hubx.myplant.R
-import com.hubx.myplant.databinding.FragmentOnboardingPagerBinding
 import com.hubx.myplant.databinding.FragmentPaywallBinding
 import com.hubx.myplant.util.TextUtil
 

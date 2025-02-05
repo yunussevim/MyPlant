@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="GradientTextView">
+        <attr name="gradientFromColor" format="color" />
+        <attr name="gradientToColor" format="color" />->
+        <attr name="gradientOrientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

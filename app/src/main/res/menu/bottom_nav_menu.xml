@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="@string/navbar_home" />
+    <item
+        android:id="@+id/diagnose"
+        android:icon="@drawable/diagnose"
+        android:title="@string/navbar_diagnose" />
+    <item
+        android:id="@+id/tab_dummy"
+        android:icon="@drawable/transparent"
+        android:title=""
+        android:enabled="false" />
+    <item
+        android:id="@+id/my_plants"
+        android:icon="@drawable/my_garden"
+        android:title="@string/navbar_garden" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="@string/navbar_profile" />
+</menu>
