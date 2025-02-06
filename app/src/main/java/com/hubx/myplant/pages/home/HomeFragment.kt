@@ -5,32 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hubx.myplant.databinding.FragmentHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
-
-    val questions = listOf(
-        QuestionsListItem("https://firebasestorage.googleapis.com/v0/b/flora---plant-identifier.appspot.com/o/public%2FCard.png?alt=media", "How to identify plants easily with PlantApp?"),
-        QuestionsListItem("https://firebasestorage.googleapis.com/v0/b/flora---plant-identifier.appspot.com/o/public%2FCard.png?alt=media", "How to identify plants?"),
-        QuestionsListItem("https://firebasestorage.googleapis.com/v0/b/flora---plant-identifier.appspot.com/o/public%2FCard.png?alt=media", "How to identify plants?"),
-    )
-
-    val plants = listOf(
-        PlantsListItem("https://cms-cdn.plantapp.app/5_d2384a3938/5_d2384a3938.png","Cacti and Succulents"),
-        PlantsListItem("https://cms-cdn.plantapp.app/5_d2384a3938/5_d2384a3938.png","Cacti and Succulents"),
-        PlantsListItem("https://cms-cdn.plantapp.app/5_d2384a3938/5_d2384a3938.png","Cacti and Succulents"),
-        PlantsListItem("https://cms-cdn.plantapp.app/5_d2384a3938/5_d2384a3938.png","Cacti and Succulents"),
-        PlantsListItem("https://cms-cdn.plantapp.app/5_d2384a3938/5_d2384a3938.png","Cacti and Succulents"),
-        PlantsListItem("https://cms-cdn.plantapp.app/5_d2384a3938/5_d2384a3938.png","Cacti and Succulents"),
-        PlantsListItem("https://cms-cdn.plantapp.app/5_d2384a3938/5_d2384a3938.png","Cacti and Succulents"),
-        PlantsListItem("https://cms-cdn.plantapp.app/5_d2384a3938/5_d2384a3938.png","Cacti and Succulents"),
-        PlantsListItem("https://cms-cdn.plantapp.app/5_d2384a3938/5_d2384a3938.png","Cacti and Succulents"),
-    )
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel: HomeFragmentViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,11 +32,23 @@ class HomeFragment : Fragment() {
 
         binding.rvQuestion.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        val adapter = QuestionsListAdapter(questions)
-        binding.rvQuestion.adapter = adapter
+        viewModel.articles.observe(viewLifecycleOwner) { articleList ->
+            binding.rvQuestion.adapter = QuestionsListAdapter(articleList.map { article ->
+                QuestionsListItem(
+                    text = article.title,
+                    src = article.imageUri
+                )
+            })
+        }
 
         binding.rvPlants.layoutManager = GridLayoutManager(requireContext(), 2)
-        binding.rvPlants.adapter = PlantsListAdapter(plants)
-
+        viewModel.plants.observe(viewLifecycleOwner) { plantList ->
+            binding.rvPlants.adapter = PlantsListAdapter(plantList.map { plant ->
+                PlantsListItem(
+                    text = plant.title,
+                    src = plant.imageUrl
+                )
+            })
+        }
     }
 }

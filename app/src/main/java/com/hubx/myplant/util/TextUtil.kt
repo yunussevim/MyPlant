@@ -22,3 +22,4 @@ object TextUtil {
         return spannableString
     }
 }
+
