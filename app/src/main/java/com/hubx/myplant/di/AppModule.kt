@@ -7,6 +7,8 @@ import com.hubx.myplant.data.repository.ArticleRepository
 import com.hubx.myplant.data.repository.ArticleRepositoryImpl
 import com.hubx.myplant.data.repository.PlantRepository
 import com.hubx.myplant.data.repository.PlantRepositoryImpl
+import com.hubx.myplant.data.repository.WeatherRepository
+import com.hubx.myplant.data.repository.WeatherRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -47,4 +49,10 @@ abstract class RepositoryModule {
     abstract fun bindArticleRepository(
         impl: ArticleRepositoryImpl
     ): ArticleRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindWeatherRepository(
+        impl: WeatherRepositoryImpl
+    ): WeatherRepository
 }
