@@ -16,6 +16,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        buildConfigField ("String", "WEATHER_API_KEY", "\"5c79122d65188a78c69598ad07c7c6ea\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {
@@ -43,6 +44,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
